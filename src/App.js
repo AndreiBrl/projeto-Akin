@@ -3,6 +3,7 @@ import './components/style.css'
 import "./components/style.css"
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import Home from './components/pages/Home';
+import Leitura from './components/pages/Leitura';
 
 function App() {
   // const [postsImgs, setPostsImgs] = useState([])
@@ -34,6 +35,7 @@ function App() {
 
         <Route>
           <Route path="/" element={<Home />} />
+          <Route path="leitura" element={<Leitura />} />
         </Route>
       </Routes>
       </BrowserRouter>
