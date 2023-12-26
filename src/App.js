@@ -30,7 +30,7 @@ function App() {
   return (
     <div style={{ backgroundColor: "lightgray" }} >
       <h1 style={{ textAlign: "center", marginBottom: "2vw" }}>
-        Teste Teste
+        Teste Teste Teste
       </h1>
     
     </div>
