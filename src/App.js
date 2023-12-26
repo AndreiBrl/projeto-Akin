@@ -1,9 +1,8 @@
 import './App.css';
-import Post from './components/Post';
 import './components/style.css'
-import { loadPost } from './utils/loadPosts';
-import { useEffect, useState } from 'react';
 import "./components/style.css"
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import Home from './components/pages/Home';
 
 function App() {
   // const [postsImgs, setPostsImgs] = useState([])
@@ -14,7 +13,7 @@ function App() {
   //     setPostsImgs(loadData)
   //   }
   //   load();
-    
+
   // }, [])
   // const [numPosts,setNumPosts]=useState(6);
 
@@ -28,12 +27,17 @@ function App() {
 
 
   return (
-    <div style={{ backgroundColor: "lightgray" }} >
-      <h1 style={{ textAlign: "center", marginBottom: "2vw" }}>
-        Teste Teste Teste
-      </h1>
-    
-    </div>
+    <>
+
+      <BrowserRouter>
+      <Routes>
+
+        <Route>
+          <Route path="/" element={<Home />} />
+        </Route>
+      </Routes>
+      </BrowserRouter>
+    </>
   );
 }
 
