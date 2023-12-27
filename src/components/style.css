@@ -1,3 +1,29 @@
-body{
-background-color: black;
+/* Para celular */
+@media only screen and (max-width: 600px) {
+    body {
+        background-color: #F2E3D0;
+        background-image: url("../components/img/backHome.png");
+        background-size: 106vw;
+        background-repeat: no-repeat;
+
+    }
+
+    .container {
+        position: relative;
+
+    }
+
+    .vilage {
+        margin-top: 20vw;
+        text-align: center;
+    }
+
+    .vilage h1 {
+
+        color: black;
+    }
+
+    .menu img {
+        width: 30vw;
+    }
 }
