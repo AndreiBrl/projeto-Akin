@@ -1,6 +1,6 @@
 import { useNavigate } from "react-router-dom";
 import caveira from "../img/caveira.png"
-
+import pedras from "../img/menu.png"
 const Home = () => {
 
     const navigation = useNavigate();
@@ -18,6 +18,7 @@ const Home = () => {
             </div>
             <div className="menu">
                 {/* <img src={caveira}/> */}
+                <img src={pedras}/>
             </div>
         </div>
     )
