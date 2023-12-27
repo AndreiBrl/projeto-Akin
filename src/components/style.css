@@ -1,21 +1,24 @@
 /* Para celular */
 @media only screen and (max-width: 600px) {
     body {
+        
         background-color: #F2E3D0;
         background-image: url("../components/img/backHome.png");
-        background-size: 106vw;
+        background-size: 107vw;
         background-repeat: no-repeat;
 
     }
 
     .container {
+
+        overflow: hidden;
         position: relative;
 
     }
 
     .vilage {
         margin-top: 50vw;
-        margin-bottom: 58vw;
+        margin-bottom: 60vw;
 
         text-align: center;
     }
@@ -30,7 +33,7 @@
 
     .menu img {
 
-        width: 117vw;
+        width: 120vw;
     }
 
 }
