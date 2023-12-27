@@ -14,19 +14,23 @@
     }
 
     .vilage {
-        margin-top: 20vw;
+        margin-top: 50vw;
+        margin-bottom: 58vw;
+
         text-align: center;
     }
 
-    .vilage h1 {
+    .vilage img {
 
-        color: black;
+
+        width: 100vw;
     }
+
+    .menu {}
 
     .menu img {
-        margin-top: 17vw;
 
-        width: 102vw;
+        width: 117vw;
     }
-    
+
 }

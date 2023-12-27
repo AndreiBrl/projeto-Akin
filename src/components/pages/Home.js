@@ -1,6 +1,7 @@
 import { useNavigate } from "react-router-dom";
 import caveira from "../img/caveira.png"
 import pedras from "../img/menu.png"
+import titulo from "../img/tituloHome.png"
 const Home = () => {
 
     const navigation = useNavigate();
@@ -13,7 +14,8 @@ const Home = () => {
         <div className="container">
             <div className="vilage">
 
-                <h1 onClick={() => clica()} >Tribos Ancestrais</h1>
+
+                <img src={titulo}/>
 
             </div>
             <div className="menu">
