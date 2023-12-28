@@ -8,7 +8,7 @@ const Leitura = () => {
         <div className="containerLeitura">
             <div className="backLeitura">
                 <ReactReader
-                    url="https://react-reader.metabits.no/files/alice.epub"
+                    url="https://andreibrl.github.io/projeto-Akin/src/components/book/oriOriginal%20-%20Andrei%20Barbuto.epub"
                     location={location}
                     locationChanged={(epubcfi) => setLocation(epubcfi)}
                     title='Tribos Ancestrais'
