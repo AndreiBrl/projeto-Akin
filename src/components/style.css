@@ -1,18 +1,20 @@
+/* pagina HOME */
 /* Para celular */
 @media only screen and (max-width: 600px) {
 
     body {
 
+
+        overflow: hidden;
+    }
+
+    .containerHome {
+
         background-color: #F2E3D0;
         background-image: url("../components/img/backHome.png");
         background-size: cover;
         background-repeat: no-repeat;
-        height: 195vw;
-        overflow: hidden;
-        
-    }
-
-    .container {
+        height: 191vw;
         overflow: hidden;
         position: relative;
     }
@@ -42,7 +44,7 @@
     .about {
         width: 20vw;
         height: 20vw;
-        background-color: green;
+
         position: absolute;
         top: 3vw;
         left: 42vw
@@ -51,7 +53,7 @@
     .book {
         width: 25vw;
         height: 20vw;
-        background-color: green;
+
         position: absolute;
         top: 38vw;
         left: 22vw
@@ -60,10 +62,22 @@
     .catarse {
         width: 25vw;
         height: 20vw;
-        background-color: green;
+
         position: absolute;
         top: 32vw;
         left: 52vw
     }
+
+}
+
+/* pagina Leitura */
+@media only screen and (max-width: 600px) {
+
+
+    .backLeitura {
+        height: 200vw;
+        background-color: black;
+    }
+
 
 }

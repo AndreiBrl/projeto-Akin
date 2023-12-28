@@ -11,7 +11,7 @@ const Home = () => {
     }
 
     return (
-        <div className="container">
+        <div className="containerHome">
             <div className="vilage">
 
 
@@ -22,7 +22,7 @@ const Home = () => {
                 {/* <img src={caveira}/> */}
                 <img src={pedras}/>
                 <div  onClick={()=>{navega('/Leitura')}} className="about"></div>
-                <div className="book"></div>
+                <div onClick={()=>{navega('/Leitura')}} className="book"></div>
                 <div className="catarse"></div>
             </div>
         </div>
