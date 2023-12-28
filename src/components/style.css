@@ -1,16 +1,17 @@
 /* Para celular */
 @media only screen and (max-width: 600px) {
     body {
-        
+
         background-color: #F2E3D0;
         background-image: url("../components/img/backHome.png");
         background-size: 107vw;
         background-repeat: no-repeat;
 
+
     }
-
+    
     .container {
-
+        
         overflow: hidden;
         position: relative;
 
@@ -19,6 +20,7 @@
     .vilage {
         margin-top: 50vw;
         margin-bottom: 60vw;
+
 
         text-align: center;
     }
@@ -29,11 +31,36 @@
         width: 100vw;
     }
 
-    .menu {}
+    .menu{
+        position: relative;
+    }
 
     .menu img {
-
         width: 120vw;
+    }
+    .about{
+        width: 20vw;
+        height: 20vw;
+        background-color: green;
+        position: absolute;
+        top: 3vw;
+        left:42vw
+    }
+    .book{
+        width: 25vw;
+        height: 20vw;
+        background-color: green;
+        position: absolute;
+        top: 38vw;
+        left:22vw
+    }
+    .catarse{
+        width: 25vw;
+        height: 20vw;
+        background-color: green;
+        position: absolute;
+        top: 32vw;
+        left:52vw
     }
 
 }

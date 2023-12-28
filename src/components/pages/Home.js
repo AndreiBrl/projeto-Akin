@@ -5,8 +5,8 @@ import titulo from "../img/tituloHome.png"
 const Home = () => {
 
     const navigation = useNavigate();
-    const clica = () => {
-        navigation('/Leitura')
+    const navega = (rota) => {
+        navigation(rota)
 
     }
 
@@ -21,6 +21,9 @@ const Home = () => {
             <div className="menu">
                 {/* <img src={caveira}/> */}
                 <img src={pedras}/>
+                <div  onClick={()=>{navega('/Leitura')}} className="about"></div>
+                <div className="book"></div>
+                <div className="catarse"></div>
             </div>
         </div>
     )
