@@ -1,25 +1,20 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { ReactReader } from 'react-reader';
 
-const Leitura = () => {
-    const [location, setLocation] = useState(0);
+const LeituraEPUB = () => {
+  // Substitua com o caminho real para o seu arquivo EPUB
+  const epubUrl = 'https://magical-marzipan-1029e1.netlify.app/Original-Andrei_Barbuto.epub';
 
-    return (
-        <div className="containerLeitura">
-            <div className="backLeitura">
-                <ReactReader
-                    url="https://andreibrl.github.io/projeto-Akin/src/components/book/oriOriginal%20-%20Andrei%20Barbuto.epub"
-                    location={location}
-                    locationChanged={(epubcfi) => setLocation(epubcfi)}
-                    title='Tribos Ancestrais'
-                    
-                />
-            </div>
-        </div>
-    );
+  return (
+    <div style={{ position: 'relative', height: '100vh' }}>
+        <h1>teste</h1>
+      <ReactReader
+        url={epubUrl}
+        title="Exemplo de Leitura EPUB"
+        locationChanged={(epubcifi) => console.log(epubcifi)}
+      />
+    </div>
+  );
 };
 
-
-
-export default Leitura;
-
+export default LeituraEPUB;
