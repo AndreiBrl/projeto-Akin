@@ -79,6 +79,18 @@
         background-color: white;
         /* padding: 5vw; */
     }
+    
+    .menuLeitura {
+
+        position: relative;
+        height: 35vw;
+        /* background-color: #E8B87A; */
+    }
+
+    .menuLeitura img {
+        position: absolute; top: 0vw;left: 0vw; width: 95vw
+    }
+
 
 
 }
