@@ -20,7 +20,7 @@ const LeituraEPUB = () => {
 
 
     const handleLocation = (location) => {
-        if (location !== 'epubcfi(/6/4!/4/2/1:0)'&& TotcurrentLocation!="") {
+        if (location !== 'epubcfi(/6/4!/4/2/1:0)') {
             console.log(location);
             setFlag(false);
             setTotCurrentLocation(location.toString());
