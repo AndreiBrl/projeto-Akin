@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { ReactReader, ReactReaderStyle } from 'react-reader';
-import menuLeitura from '../img/menuLeitura.png'
+import menuLeitura from '../img/capaEdit.png'
 
 const LeituraEPUB = () => {
     // Substitua com o caminho real para o seu arquivo EPUB
@@ -60,16 +60,17 @@ location é executada inevitavelmente assim que entra na tela.
 
                         tocArea: {
                             ...ReactReaderStyle.tocArea,
-                            marginTop: '30vw'
+                            marginTop: '10vw'
                         },
                         tocButton: {
                             ...ReactReaderStyle.tocButton,
-                            marginTop: '17vw',
+                            marginTop: '7vw',
                             
                         },
                         readerArea: {
                             ...ReactReaderStyle.readerArea,
-                            marginTop:'11vw',
+                            marginTop:'-5vw',
+                            backgroundColor:'#F4E2C7'
                             
                             
 

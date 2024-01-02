@@ -88,12 +88,12 @@
     .menuLeitura {
 
         position: relative;
-        height: 35vw;
+        height: 100vw;
         /* background-color: #E8B87A; */
     }
 
     .menuLeitura img {
-        position: absolute; top: 0vw;left: 0vw; width: 95vw
+        width: 100vw
     }
 
 
