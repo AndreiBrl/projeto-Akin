@@ -47,7 +47,8 @@
 
         position: absolute;
         top: 3vw;
-        left: 42vw
+        left: 42vw;
+        cursor: pointer;
     }
 
     .book {
@@ -56,7 +57,11 @@
 
         position: absolute;
         top: 38vw;
-        left: 22vw
+        left: 22vw;
+        cursor: pointer;
+    }
+    .catarse{
+        cursor: pointer;
     }
 
     .catarse {

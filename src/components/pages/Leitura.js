@@ -71,9 +71,16 @@ location é executada inevitavelmente assim que entra na tela.
                             ...ReactReaderStyle.readerArea,
                             marginTop:'11vw',
                             
+                            
+
 
                             
                         },
+                       reader:{
+                        ...ReactReaderStyle.reader,
+
+                        
+                       },
                        
                         
 
