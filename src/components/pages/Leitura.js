@@ -1,6 +1,7 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import { ReactReader, ReactReaderStyle } from 'react-reader';
-import menuLeitura from '../img/capaEdit.png'
+import menuLeitura from '../img/capaEdit.png';
+
 
 const LeituraEPUB = () => {
     // Substitua com o caminho real para o seu arquivo EPUB
@@ -8,6 +9,13 @@ const LeituraEPUB = () => {
     const [TotcurrentLocation, setTotCurrentLocation] = useState("");
     const [changeZIndex, setChangeZindex] = useState(2)
     const [flag, setFlag] = useState(true);
+
+    const [page, setPage] = useState('');
+    const [chapter, setChapter] = useState('n/a');
+    const rendition = useRef();
+    const toc = useRef([]);
+
+
 
     useEffect(() => {
         // Recupere a localização do localStorage ao montar o componente
@@ -18,6 +26,20 @@ const LeituraEPUB = () => {
         }
     }, []);
 
+    useEffect(() => {
+        // Atualize as informações da página e do capítulo sempre que houver uma mudança de localização
+        if (rendition.current) {
+            const { displayed, href } = rendition.current.location.start;
+            // Recupere o capítulo correspondente da tabela de conteúdos (TOC)
+            const chapterItem = toc.current.find(item => item.href === href);
+            setChapter(chapterItem ? chapterItem.label : 'n/a');
+            setPage(<h1 className='pagina'> {chapterItem.label} - {displayed.page} de {displayed.total}</h1>);
+            console.log(chapterItem);
+
+        }
+        
+    }, [TotcurrentLocation, toc.current]);
+
 
 
     const handleLocation = (location) => {
@@ -27,6 +49,7 @@ const LeituraEPUB = () => {
             setTotCurrentLocation(location.toString());
             // Salve a localização no localStorage
             localStorage.setItem('epubLocation', location.toString());
+            
         }
     };
 
@@ -35,6 +58,10 @@ const LeituraEPUB = () => {
             <div className='menuLeitura'>
 
                 <img src={menuLeitura} style={{ zIndex: changeZIndex }} />
+            </div>
+            <div className='pag'>
+                {page}
+
             </div>
             {/* flag criada por conta de que a propriedade location da bug na primeira rendezação de tela. Segundo a própria documentação a funcao 
 location é executada inevitavelmente assim que entra na tela.
@@ -55,9 +82,13 @@ location é executada inevitavelmente assim que entra na tela.
                     locationChanged={(location) => handleLocation(location)}
 
                     location={TotcurrentLocation}
+                    getRendition={(rend) => (rendition.current = rend)}
+                    tocChanged={(tocData) => (toc.current = tocData)}
+                    page={page} // Adicionando o estado da página
+                    chapter={chapter} // Adicionando o estado do capítulo
                     readerStyles={{
                         ...ReactReaderStyle,
-                        container:{
+                        container: {
                             backgroundColor: '#F4E2C7',
                             ...ReactReaderStyle.container,
                         },
@@ -65,7 +96,7 @@ location é executada inevitavelmente assim que entra na tela.
                             ...ReactReaderStyle.tocArea,
                             marginTop: '5vw',
                             height: '150vw',
-                            color: '#522828'
+                            color: '#522828',
                         },
                         tocButton: {
                             ...ReactReaderStyle.tocButton,
@@ -77,18 +108,22 @@ location é executada inevitavelmente assim que entra na tela.
                             ...ReactReaderStyle.readerArea,
                             marginTop: '-5vw',
                             backgroundColor: '#F4E2C7',
-                            
+
+
                         },
                         reader: {
                             ...ReactReaderStyle.reader,
-                            backgroundColor: '#F4E2C7'
+                            backgroundColor: '#F4E2C7',
+
+
 
 
                         },
                         arrow: {
                             ...ReactReaderStyle.arrow,
                             backgroundColor: '#F4E2C7',
-                            color: '#522828'
+                            color: '#522828',
+
 
                         },
                         tocButtonBottom: {
@@ -107,7 +142,7 @@ location é executada inevitavelmente assim que entra na tela.
                     }}
 
                     showToc={true}
-                    tocChanged={(e) => console.log(e)}
+
                 />
             )}
         </div>

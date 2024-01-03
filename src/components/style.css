@@ -61,7 +61,8 @@
         left: 22vw;
         cursor: pointer;
     }
-    .catarse{
+
+    .catarse {
         cursor: pointer;
     }
 
@@ -84,12 +85,13 @@
         height: 200vw;
         background-color: #F4E2C7;
         /* padding: 5vw; */
-        
+
     }
-    
+
     .menuLeitura {
-        
+
         position: relative;
+
         height: 100vw;
         /* background-color: #E8B87A; */
     }
@@ -98,6 +100,18 @@
         width: 100vw
     }
 
-
-
+    .pag {
+        position: relative;
+        
+        z-index: 2;
+    }
+    
+    .pagina{
+        font-family: 'Times New Roman', Times, serif;
+        color:'white';
+        font-size: 4vw;
+        position: absolute;
+        bottom: -13vw;
+        left: 56vw;
+    }
 }
