@@ -57,7 +57,10 @@ location é executada inevitavelmente assim que entra na tela.
                     location={TotcurrentLocation}
                     readerStyles={{
                         ...ReactReaderStyle,
-                        
+                        container:{
+                            backgroundColor: '#F4E2C7',
+                            ...ReactReaderStyle.container,
+                        },
                         tocArea: {
                             ...ReactReaderStyle.tocArea,
                             marginTop: '5vw',
@@ -73,11 +76,12 @@ location é executada inevitavelmente assim que entra na tela.
                         readerArea: {
                             ...ReactReaderStyle.readerArea,
                             marginTop: '-5vw',
-                            backgroundColor: '#F4E2C7'
-
+                            backgroundColor: '#F4E2C7',
+                            
                         },
                         reader: {
                             ...ReactReaderStyle.reader,
+                            backgroundColor: '#F4E2C7'
 
 
                         },
