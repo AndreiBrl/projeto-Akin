@@ -31,13 +31,19 @@ const LeituraEPUB = () => {
         if (rendition.current) {
             const { displayed, href } = rendition.current.location.start;
             // Recupere o capítulo correspondente da tabela de conteúdos (TOC)
-            const chapterItem = toc.current.find(item => item.href === href);
+
+            const chapterItem = toc.current?.find(item => item.href === href);
             setChapter(chapterItem ? chapterItem.label : 'n/a');
-            setPage(<h1 className='pagina'> {chapterItem.label} - {displayed.page} de {displayed.total}</h1>);
-            console.log(chapterItem);
+
+            if (chapterItem && chapterItem.label !== 'n/a' && displayed) {
+                setPage(<h1 className='pagina'> {chapterItem.label} - {displayed.page} de {displayed.total}</h1>);
+            }
+            else{
+                setPage('');
+            }
 
         }
-        
+
     }, [TotcurrentLocation, toc.current]);
 
 
@@ -49,7 +55,7 @@ const LeituraEPUB = () => {
             setTotCurrentLocation(location.toString());
             // Salve a localização no localStorage
             localStorage.setItem('epubLocation', location.toString());
-            
+
         }
     };
 
@@ -59,6 +65,7 @@ const LeituraEPUB = () => {
 
                 <img src={menuLeitura} style={{ zIndex: changeZIndex }} />
             </div>
+          
             <div className='pag'>
                 {page}
 
