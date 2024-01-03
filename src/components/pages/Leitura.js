@@ -57,33 +57,47 @@ location é executada inevitavelmente assim que entra na tela.
                     location={TotcurrentLocation}
                     readerStyles={{
                         ...ReactReaderStyle,
-
+                        
                         tocArea: {
                             ...ReactReaderStyle.tocArea,
-                            marginTop: '10vw'
+                            marginTop: '5vw',
+                            height: '150vw',
+                            color: '#522828'
                         },
                         tocButton: {
                             ...ReactReaderStyle.tocButton,
                             marginTop: '7vw',
-                            
+
+
                         },
                         readerArea: {
                             ...ReactReaderStyle.readerArea,
-                            marginTop:'-5vw',
-                            backgroundColor:'#F4E2C7'
-                            
-                            
+                            marginTop: '-5vw',
+                            backgroundColor: '#F4E2C7'
 
-
-                            
                         },
-                       reader:{
-                        ...ReactReaderStyle.reader,
+                        reader: {
+                            ...ReactReaderStyle.reader,
 
-                        
-                       },
-                       
-                        
+
+                        },
+                        arrow: {
+                            ...ReactReaderStyle.arrow,
+                            backgroundColor: '#F4E2C7',
+                            color: '#522828'
+
+                        },
+                        tocButtonBottom: {
+                            ...ReactReaderStyle.tocButtonBottom,
+                            backgroundColor: '#522828'
+                        },
+                        tocButtonBarTop: {
+                            ...ReactReaderStyle.tocButtonBarTop,
+                            backgroundColor: '#522828'
+                        }
+
+
+
 
 
                     }}

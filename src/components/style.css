@@ -17,6 +17,7 @@
         height: 191vw;
         overflow: hidden;
         position: relative;
+
     }
 
     .vilage {
@@ -81,12 +82,12 @@
 
     .containerLeitura {
         height: 200vw;
-        background-color: white;
+        background-color: #F4E2C7;
         /* padding: 5vw; */
     }
     
     .menuLeitura {
-
+        
         position: relative;
         height: 100vw;
         /* background-color: #E8B87A; */
