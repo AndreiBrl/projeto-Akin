@@ -5,7 +5,7 @@ import menuLeitura from '../img/capaEdit.png';
 
 const LeituraEPUB = () => {
     // Substitua com o caminho real para o seu arquivo EPUB
-    const epubUrl = 'https://magical-marzipan-1029e1.netlify.app/Original - Andrei Barbuto.epub';
+    const epubUrl = 'https://magical-marzipan-1029e1.netlify.app/Ori-teste - Andrei Barbuto.epub';
     const [TotcurrentLocation, setTotCurrentLocation] = useState("");
     const [changeZIndex, setChangeZindex] = useState(2)
     const [flag, setFlag] = useState(true);
