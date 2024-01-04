@@ -216,6 +216,49 @@ body {
 }
 
 /* pagina Leitura */
+/* Desktop */
+
+.containerLeitura {
+    
+  
+    height: 50vw;
+    margin-left: 20vw;
+    margin-right: 20vw;
+    background-color: #F4E2C7;
+    /* padding: 5vw; */
+
+}
+
+.menuLeitura {
+
+    position: relative;
+    display: flex;
+    justify-content: center;
+    height: 35vw;
+    /* background-color: #E8B87A; */
+}
+
+.menuLeitura img {
+    width: 35vw;
+    border-radius: 5px;
+}
+
+.pag {
+    position: relative;
+
+    z-index: 2;
+}
+
+.pagina {
+    font-family: 'Times New Roman', Times, serif;
+    color: 'white';
+    font-size: 2vw;
+    position: absolute;
+    bottom: -3vw;
+    right: 5vw;
+}
+
+/* Celular */
 @media only screen and (max-width: 600px) {
 
 
@@ -223,19 +266,21 @@ body {
         height: 200vw;
         background-color: #F4E2C7;
         /* padding: 5vw; */
-
+        margin-left: 0vw;
+        margin-right: 0vw;
+        margin-bottom: 0vw;
     }
 
     .menuLeitura {
 
         position: relative;
-
+        display: block;
         height: 100vw;
         /* background-color: #E8B87A; */
     }
 
     .menuLeitura img {
-        width: 100vw
+        width: 100vw;
     }
 
     .pag {

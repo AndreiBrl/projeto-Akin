@@ -14,7 +14,7 @@ const LeituraEPUB = () => {
     const [chapter, setChapter] = useState('n/a');
     const rendition = useRef();
     const toc = useRef([]);
-
+    const x = 10;
 
 
     useEffect(() => {
@@ -38,14 +38,14 @@ const LeituraEPUB = () => {
             if (chapterItem && chapterItem.label !== 'n/a' && displayed) {
                 setPage(<h1 className='pagina'> {chapterItem.label} - {displayed.page} de {displayed.total}</h1>);
             }
-            else{
+            else {
                 setPage('');
             }
 
         }
 
     }, [TotcurrentLocation, toc.current]);
-
+    console.log('aqui' + window.innerWidth);
 
 
     const handleLocation = (location) => {
@@ -65,7 +65,7 @@ const LeituraEPUB = () => {
 
                 <img src={menuLeitura} style={{ zIndex: changeZIndex }} />
             </div>
-          
+
             <div className='pag'>
                 {page}
 
@@ -83,6 +83,7 @@ location é executada inevitavelmente assim que entra na tela.
                     showToc={true}
                 />
             ) : (
+                // <div style={{width:'100vw',height:'120vw', backgroundColor:'red'}}>
                 <ReactReader
                     url={epubUrl}
 
@@ -93,7 +94,78 @@ location é executada inevitavelmente assim que entra na tela.
                     tocChanged={(tocData) => (toc.current = tocData)}
                     page={page} // Adicionando o estado da página
                     chapter={chapter} // Adicionando o estado do capítulo
-                    readerStyles={{
+                    readerStyles={window.innerWidth >= 600 ? {
+
+                        ...ReactReaderStyle,
+                        container: {
+                            backgroundColor: '#F4E2C7',
+                            ...ReactReaderStyle.container,
+                            
+                           
+                        },
+                        tocArea: {
+                            ...ReactReaderStyle.tocArea,
+                            marginTop: '5vw',
+                            height: '150vw',
+                            color: '#522828',
+                        },
+                        tocButton: {
+                            ...ReactReaderStyle.tocButton,
+                            width:'3vw',
+                            marginTop: '-0.5vw',
+
+
+                        },
+                        readerArea: {
+                            ...ReactReaderStyle.readerArea,
+                            marginTop: '0vw',
+                            backgroundColor: '#F4E2C7',
+                            
+                            
+                            
+                        },
+                        reader: {
+                            ...ReactReaderStyle.reader,
+                            backgroundColor: '#F4E2C7',
+                          
+                            
+
+
+
+                        },
+                        arrow: {
+                            ...ReactReaderStyle.arrow,
+                            backgroundColor: 'transparent',
+                            color: '#522828',
+                            
+
+
+                        },
+                        tocButtonBottom: {
+                            ...ReactReaderStyle.tocButtonBottom,
+                            backgroundColor: '#522828'
+                        },
+                        tocButtonBarTop: {
+                            ...ReactReaderStyle.tocButtonBarTop,
+                            backgroundColor: '#522828'
+                        },
+                        prev:{
+                            ...ReactReaderStyle.prev,
+                            fontSize:'10vw',
+                            top:'20vw'
+
+
+                        },
+                        next:{
+                            ...ReactReaderStyle.next,
+                            fontSize:'10vw',
+                            top:'20vw'
+
+
+                        }
+
+
+                    } : {
                         ...ReactReaderStyle,
                         container: {
                             backgroundColor: '#F4E2C7',
@@ -151,6 +223,7 @@ location é executada inevitavelmente assim que entra na tela.
                     showToc={true}
 
                 />
+                // </div>
             )}
         </div>
     );
