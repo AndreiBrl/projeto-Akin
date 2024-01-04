@@ -1,7 +1,10 @@
 import { useNavigate } from "react-router-dom";
-import caveira from "../img/caveira.png"
-import pedras from "../img/menu.png"
+import menuMobile from "../img/menu.png"
+import menuDesk from "../img/menuDesk.png"
 import titulo from "../img/tituloHome.png"
+import livro from "../img/livroAkin.png"
+import homenzin from "../img/homenzin.png"
+import saco from "../img/saco.png"
 const Home = () => {
 
     const navigation = useNavigate();
@@ -15,14 +18,20 @@ const Home = () => {
             <div className="vilage">
 
 
-                <img src={titulo}/>
+                <img src={titulo} />
 
             </div>
             <div className="menu">
-                {/* <img src={caveira}/> */}
-                <img src={pedras}/>
-                <div  onClick={()=>{navega('/Leitura')}} className="about"></div>
-                <div onClick={()=>{navega('/Leitura')}} className="book"></div>
+                
+                    
+                        <img className="m-desk" src={menuDesk} />
+                        <img className="m-mobile"src={menuMobile} />
+                        <img className="livroAkin"src={livro} onClick={() => { navega('/Leitura') }}/>
+                        <img className="homenzin"src={homenzin} onClick={() => { navega('/Leitura') }}/>
+                        <img className="saco"src={saco} onClick={() => { navega('/Leitura') }}/>
+                
+                <div onClick={() => { navega('/Leitura') }} className="about"></div>
+                <div onClick={() => { navega('/Leitura') }} className="book"></div>
                 <div className="catarse"></div>
             </div>
         </div>

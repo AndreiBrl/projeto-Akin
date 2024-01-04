@@ -1,4 +1,128 @@
 /* pagina HOME */
+/* desktop */
+
+.m-mobile {
+    display: none;
+}
+
+body {
+
+    background-color: #F2E3D0;
+}
+
+.containerHome {
+
+    background-color: #F2E3D0;
+    /* background-image: url("../components/img/backHome.png"); */
+    background-size: cover;
+    background-repeat: no-repeat;
+    overflow: hidden;
+    position: relative;
+    height: 47vw;
+
+
+}
+
+.vilage {
+    padding-top: 1vw;
+    margin-bottom: 8vw;
+
+
+    text-align: center;
+}
+
+.vilage img {
+
+
+    width: 50vw;
+}
+
+.menu {
+    position: relative;
+    display: flex;
+    justify-content: center;
+
+}
+
+.m-desk {
+
+    width: 30vw;
+}
+
+.homenzin {
+    top: -5.1vw;
+    left: 44.6vw;
+    position: absolute;
+    width: 10.9vw;
+    filter: grayscale(1);
+    transition: all 0.2s linear;
+
+}
+
+.livroAkin {
+    bottom: 0;
+    width: 13.8vw;
+    left: 34vw;
+    top: 14vw;
+    position: absolute;
+    transition: all 0.2s linear;
+    filter: grayscale(1);
+    cursor: pointer;
+}
+
+.saco {
+    transition: all 0.2s linear;
+    position: absolute;
+    bottom: 2.3vw;
+    left: 51.7vw;
+    width: 14vw;
+    filter: grayscale(1);
+}
+
+.livroAkin:hover,
+.homenzin:hover,.saco:hover {
+    filter: grayscale(0);
+    scale: 1.09;
+}
+
+.about {
+    width: 10vw;
+    height: 10vw;
+    display: none;
+    position: absolute;
+    top: 3vw;
+    left: 42vw;
+    cursor: pointer;
+}
+
+.book {
+    width: 10vw;
+    height: 10vw;
+    display: none;
+    position: absolute;
+    top: 8vw;
+    left: 22vw;
+    cursor: pointer;
+}
+
+
+.catarse {
+    cursor: pointer;
+
+}
+
+.catarse {
+    width: 10vw;
+    height: 10vw;
+    display: none;
+    position: absolute;
+    top: 2vw;
+    left: 52vw
+}
+
+
+
+
 /* Para celular */
 @media only screen and (max-width: 600px) {
 
@@ -6,6 +130,14 @@
 
 
         /* overflow: hidden; */
+    }
+
+    .m-desk {
+        display: none;
+    }
+
+    .m-mobile {
+        display: block;
     }
 
     .containerHome {
@@ -35,17 +167,23 @@
     }
 
     .menu {
+        display: block;
         position: relative;
     }
 
     .menu img {
+
         width: 120vw;
+    }
+
+    .livroAkin,.homenzin,.saco {
+        display: none;
     }
 
     .about {
         width: 20vw;
         height: 20vw;
-
+        display: block;
         position: absolute;
         top: 3vw;
         left: 42vw;
@@ -55,7 +193,7 @@
     .book {
         width: 25vw;
         height: 20vw;
-
+        display: block;
         position: absolute;
         top: 38vw;
         left: 22vw;
@@ -69,7 +207,7 @@
     .catarse {
         width: 25vw;
         height: 20vw;
-
+        display: block;
         position: absolute;
         top: 32vw;
         left: 52vw
@@ -102,13 +240,13 @@
 
     .pag {
         position: relative;
-        
+
         z-index: 2;
     }
-    
-    .pagina{
+
+    .pagina {
         font-family: 'Times New Roman', Times, serif;
-        color:'white';
+        color: 'white';
         font-size: 4vw;
         position: absolute;
         bottom: -13vw;

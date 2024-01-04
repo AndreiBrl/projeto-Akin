@@ -1,20 +1,23 @@
 {
   "files": {
-    "main.css": "/static/css/main.04909d20.css",
-    "main.js": "/static/js/main.abd493bb.js",
+    "main.css": "/static/css/main.6b9b365f.css",
+    "main.js": "/static/js/main.82d5d021.js",
     "static/js/787.f80339df.chunk.js": "/static/js/787.f80339df.chunk.js",
     "static/media/capaEdit.png": "/static/media/capaEdit.9882c2df4fc49176a65b.png",
     "static/media/backHome.png": "/static/media/backHome.0bffae93f42958d5581f.png",
     "static/media/menu.png": "/static/media/menu.32e6607efd785b9600b7.png",
-    "static/media/caveira.png": "/static/media/caveira.e15197468023519fdb26.png",
+    "static/media/menuDesk.png": "/static/media/menuDesk.0f57b3cda80370a27e5c.png",
+    "static/media/livroAkin.png": "/static/media/livroAkin.96b366e2c1c09ea965bf.png",
     "static/media/tituloHome.png": "/static/media/tituloHome.ea44f348388aa50da45b.png",
+    "static/media/saco.png": "/static/media/saco.41a16e4f37fed5fe0a3d.png",
+    "static/media/homenzin.png": "/static/media/homenzin.74e79f44274b7f66be46.png",
     "index.html": "/index.html",
-    "main.04909d20.css.map": "/static/css/main.04909d20.css.map",
-    "main.abd493bb.js.map": "/static/js/main.abd493bb.js.map",
+    "main.6b9b365f.css.map": "/static/css/main.6b9b365f.css.map",
+    "main.82d5d021.js.map": "/static/js/main.82d5d021.js.map",
     "787.f80339df.chunk.js.map": "/static/js/787.f80339df.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.04909d20.css",
-    "static/js/main.abd493bb.js"
+    "static/css/main.6b9b365f.css",
+    "static/js/main.82d5d021.js"
   ]
 }
