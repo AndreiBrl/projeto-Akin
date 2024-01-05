@@ -44,7 +44,7 @@ const LeituraEPUB = () => {
 
         }
 
-    }, [TotcurrentLocation, toc.current]);
+    }, [TotcurrentLocation]);
     console.log('aqui' + window.innerWidth);
 
 

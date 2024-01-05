@@ -27,10 +27,10 @@ const Home = () => {
                         <img className="m-desk" src={menuDesk} />
                         <img className="m-mobile"src={menuMobile} />
                         <img className="livroAkin"src={livro} onClick={() => { navega('/Leitura') }}/>
-                        <img className="homenzin"src={homenzin} onClick={() => { navega('/Leitura') }}/>
+                        <img className="homenzin"src={homenzin} onClick={() => { navega('/Sobre') }}/>
                         <img className="saco"src={saco} onClick={() => { navega('/Leitura') }}/>
                 
-                <div onClick={() => { navega('/Leitura') }} className="about"></div>
+                <div onClick={() => { navega('/Sobre') }} className="about"></div>
                 <div onClick={() => { navega('/Leitura') }} className="book"></div>
                 <div className="catarse"></div>
             </div>
