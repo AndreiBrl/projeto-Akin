@@ -304,12 +304,91 @@ body {
 }
 
 /* Pagina About */
+/* desktop */
+.containerSobre {
+
+    margin-left: 20vw;
+    margin-right: 20vw;
+    background-color: #F2E3D0;
+    background-image: url("../components/img/backAbout.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: relative;
+
+
+}
+
+.titulosSobre {
+    display: flex;
+
+    flex-direction: column;
+    
+    align-items: center;
+}
+
+.autor {
+    width: 20vw;
+    margin-top: 10vw;
+}
+
+.nome {
+    margin-top: 5vw;
+    width: 30vw;
+}
+
+
+.perfil {
+    margin-top: 3vw;
+    width: 30vw;
+}
+
+.redesSociais {
+    padding-bottom: 5vw;
+}
+
+.insta {
+    margin-top: 0vw;
+    width: 18vw;
+    transition: 0.3s all linear;
+    padding-left: 7vw;
+}
+
+.gmail {
+    padding-left: 5vw;
+    transition: 0.5s all linear;
+    margin-top: 3vw;
+    width: 25vw;
+
+}
+
+.insta:hover,
+.gmail:hover {
+
+    scale: 1.1;
+}
+
+.containerSobreTexto {
+    margin-left: 20vw;
+    margin-right: 20vw;
+    position: relative;
+    background-color: #F4E2C7;
+    height: 50vw;
+
+}
+
+.barraSobre {
+    width: 59.2vw;
+    position: absolute;
+    top: -1.2vw;
+}
+
 /*celular */
 @media only screen and (max-width: 600px) {
 
     .containerSobre {
 
-
+        margin-left: 0vw;
+        margin-right: 0vw;
         background-color: #F2E3D0;
         background-image: url("../components/img/backAbout.png");
         background-size: cover;
@@ -342,16 +421,18 @@ body {
         margin-top: 5vw;
         width: 70vw;
     }
-.redesSociais{
-    padding-bottom: 20vw;
-}
+
+    .redesSociais {
+        padding-bottom: 20vw;
+    }
+
     .insta {
         margin-top: 10vw;
         width: 55vw;
         transition: 0.3s all linear;
         padding-left: 7vw;
     }
-    
+
     .gmail {
         padding-left: 5vw;
         transition: 0.5s all linear;
@@ -365,14 +446,17 @@ body {
 
         scale: 1.1;
     }
-    .containerSobreTexto{
-    
+
+    .containerSobreTexto {
+        margin-left: 0vw;
+        margin-right: 0vw;
         position: relative;
         background-color: #F4E2C7;
         height: 50vw;
-        
+
     }
-    .barraSobre{
+
+    .barraSobre {
         width: 100vw;
         position: absolute;
         top: -2vw;
