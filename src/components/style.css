@@ -447,7 +447,7 @@ body {
         margin-top: 10vw;
         width: 55vw;
         transition: 0.3s all linear;
-        padding-left: 7vw;
+        padding-left: 5vw;
     }
 
     .gmail {
@@ -487,7 +487,7 @@ body {
     .textoSobre-2 {
         border-left: 2px solid rgb(88, 29, 8);
         margin-top: 25vw;
-        text-align: center;
+        text-align: justify;
         display: flex;
         flex-direction: column;
         gap: 5vw;
