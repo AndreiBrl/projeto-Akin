@@ -1,6 +1,7 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { ReactReader, ReactReaderStyle } from 'react-reader';
 import menuLeitura from '../img/capaEdit.png';
+import { Helmet } from 'react-helmet';
 
 
 const LeituraEPUB = () => {
@@ -60,6 +61,7 @@ const LeituraEPUB = () => {
 
     return (
         <div className="containerLeitura">
+          
             <div className='menuLeitura'>
 
                 <img src={menuLeitura} style={{ zIndex: changeZIndex }} />
