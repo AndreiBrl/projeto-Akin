@@ -28,7 +28,8 @@ const Home = () => {
                         <img className="m-mobile"src={menuMobile} />
                         <img className="livroAkin"src={livro} onClick={() => { navega('/Leitura') }}/>
                         <img className="homenzin"src={homenzin} onClick={() => { navega('/Sobre') }}/>
-                        <img className="saco"src={saco} onClick={() => { navega('/Leitura') }}/>
+                        <img className="saco"src={saco} />
+                        <h1 className="emBreve">EM BREVE</h1>
                 
                 <div onClick={() => { navega('/Sobre') }} className="about"></div>
                 <div onClick={() => { navega('/Leitura') }} className="book"></div>
