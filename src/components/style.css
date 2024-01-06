@@ -322,7 +322,7 @@ body {
     display: flex;
 
     flex-direction: column;
-    
+
     align-items: center;
 }
 
@@ -349,13 +349,13 @@ body {
 .insta {
     margin-top: 0vw;
     width: 18vw;
-    transition: 0.3s all linear;
+    transition: 0.1s all linear;
     padding-left: 7vw;
 }
 
 .gmail {
     padding-left: 5vw;
-    transition: 0.5s all linear;
+    transition: 0.1s all linear;
     margin-top: 3vw;
     width: 25vw;
 
@@ -364,7 +364,7 @@ body {
 .insta:hover,
 .gmail:hover {
 
-    scale: 1.1;
+    scale: 1.05;
 }
 
 .containerSobreTexto {
@@ -373,7 +373,6 @@ body {
     position: relative;
     background-color: #F4E2C7;
     height: 50vw;
-
 }
 
 .barraSobre {
@@ -382,6 +381,24 @@ body {
     top: -1.2vw;
 }
 
+.textoSobre {
+    margin-left: 10vw;
+    margin-right: 10vw;
+    display: flex;
+}
+
+.textoSobre-2 {
+    border-left: 3px solid rgb(88, 29, 8);
+    margin-top: 15vw;
+    text-align: justify;
+    display: flex;
+    flex-direction: column;
+    gap: 1vw;
+    font-size: 1.3vw;
+    /* font-family: serif; */
+    font-family: 'Times New Roman', Times, serif;
+    padding-left: 1vw;
+}
 /*celular */
 @media only screen and (max-width: 600px) {
 
@@ -452,7 +469,7 @@ body {
         margin-right: 0vw;
         position: relative;
         background-color: #F4E2C7;
-        height: 50vw;
+        height: 320vw;
 
     }
 
@@ -460,5 +477,23 @@ body {
         width: 100vw;
         position: absolute;
         top: -2vw;
+    }
+    .textoSobre {
+        margin-left: 12vw;
+        margin-right: 12vw;
+        display: flex;
+    }
+    
+    .textoSobre-2 {
+        border-left: 2px solid rgb(88, 29, 8);
+        margin-top: 25vw;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        gap: 5vw;
+        font-size: 5.3vw;
+        /* font-family: serif; */
+        font-family: 'Times New Roman', Times, serif;
+        padding-left: 3vw;
     }
 }
