@@ -6,7 +6,7 @@ import { Helmet } from 'react-helmet';
 
 const LeituraEPUB = () => {
     // Substitua com o caminho real para o seu arquivo EPUB
-    const epubUrl = 'https://magical-marzipan-1029e1.netlify.app/Ori-teste - Andrei Barbuto.epub';
+    const epubUrl = 'https://magical-marzipan-1029e1.netlify.app/teste.epub';
     const [TotcurrentLocation, setTotCurrentLocation] = useState("");
     const [changeZIndex, setChangeZindex] = useState(2)
     const [flag, setFlag] = useState(true);
@@ -19,7 +19,7 @@ const LeituraEPUB = () => {
     console.log(toc.current);
 
     useEffect(() => {
-        // Recupere a localização do localStorage ao montar o componente
+        // Recupera a localização do localStorage ao montar o componente
         const savedLocation = localStorage.getItem('epubLocation');
         if (savedLocation) {
             setTotCurrentLocation(savedLocation);
@@ -28,10 +28,10 @@ const LeituraEPUB = () => {
     }, []);
 
     useEffect(() => {
-        // Atualize as informações da página e do capítulo sempre que houver uma mudança de localização
+        // Atualiza as informações da página e do capítulo sempre que houver uma mudança de localização
         if (rendition.current) {
             const { displayed, href } = rendition.current.location.start;
-            // Recupere o capítulo correspondente da tabela de conteúdos (TOC)
+            // Recupera o capítulo correspondente da tabela de conteúdos (TOC)
 
             const chapterItem = toc.current?.find(item => item.href === href);
             setChapter(chapterItem ? chapterItem.label : 'n/a');
@@ -53,7 +53,7 @@ const LeituraEPUB = () => {
             console.log(location);
             setFlag(false);
             setTotCurrentLocation(location.toString());
-            // Salve a localização no localStorage
+            // Salvando a localização no localStorage
             localStorage.setItem('epubLocation', location.toString());
 
         }
@@ -226,7 +226,7 @@ location é executada inevitavelmente assim que entra na tela.
                     showToc={true}
 
                 />
-                // </div>
+                
             )}
         </div>
     );
