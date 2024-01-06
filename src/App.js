@@ -12,8 +12,9 @@ function App() {
     <>
       <Helmet>
         <title>Tribos Ancestrais</title>
-        <meta property="og:description" content="Teste" />
-        <meta property="og:image" content="https://magical-marzipan-1029e1.netlify.app/tituloWordTribo" />
+        <meta property="og:title" content="Tribos Ancestrais" />
+        <meta property="og:description" content="Site criado por Andrei Barbuto" />
+        <meta property="og:image" content="https://magical-marzipan-1029e1.netlify.app/tituloWordTribo.png" />
         <meta property="og:url" content="https://tribosancestrais.com.br" />
       </Helmet>
       <BrowserRouter>
