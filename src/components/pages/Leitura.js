@@ -15,7 +15,7 @@ const LeituraEPUB = () => {
     const rendition = useRef();
     const toc = useRef([]);
     const x = 10;
-
+    console.log(toc.current);
 
     useEffect(() => {
         // Recupere a localização do localStorage ao montar o componente
@@ -45,7 +45,6 @@ const LeituraEPUB = () => {
         }
 
     }, [TotcurrentLocation]);
-    console.log('aqui' + window.innerWidth);
 
 
     const handleLocation = (location) => {
@@ -83,7 +82,7 @@ location é executada inevitavelmente assim que entra na tela.
                     showToc={true}
                 />
             ) : (
-                // <div style={{width:'100vw',height:'120vw', backgroundColor:'red'}}>
+
                 <ReactReader
                     url={epubUrl}
 
@@ -100,8 +99,8 @@ location é executada inevitavelmente assim que entra na tela.
                         container: {
                             backgroundColor: '#F4E2C7',
                             ...ReactReaderStyle.container,
-                            
-                           
+
+
                         },
                         tocArea: {
                             ...ReactReaderStyle.tocArea,
@@ -111,8 +110,8 @@ location é executada inevitavelmente assim que entra na tela.
                         },
                         tocButton: {
                             ...ReactReaderStyle.tocButton,
-                            width:'3vw',
-                            marginTop: '-0.5vw',
+                            width: '2vw',
+                            marginTop: '4.5vw',
 
 
                         },
@@ -120,15 +119,15 @@ location é executada inevitavelmente assim que entra na tela.
                             ...ReactReaderStyle.readerArea,
                             marginTop: '0vw',
                             backgroundColor: '#F4E2C7',
-                            
-                            
-                            
+
+
+
                         },
                         reader: {
                             ...ReactReaderStyle.reader,
                             backgroundColor: '#F4E2C7',
-                          
-                            
+
+
 
 
 
@@ -137,7 +136,7 @@ location é executada inevitavelmente assim que entra na tela.
                             ...ReactReaderStyle.arrow,
                             backgroundColor: 'transparent',
                             color: '#522828',
-                            
+
 
 
                         },
@@ -149,17 +148,17 @@ location é executada inevitavelmente assim que entra na tela.
                             ...ReactReaderStyle.tocButtonBarTop,
                             backgroundColor: '#522828'
                         },
-                        prev:{
+                        prev: {
                             ...ReactReaderStyle.prev,
-                            fontSize:'10vw',
-                            top:'20vw'
+                            fontSize: '10vw',
+                            top: '20vw'
 
 
                         },
-                        next:{
+                        next: {
                             ...ReactReaderStyle.next,
-                            fontSize:'10vw',
-                            top:'20vw'
+                            fontSize: '10vw',
+                            top: '20vw'
 
 
                         }
@@ -173,19 +172,21 @@ location é executada inevitavelmente assim que entra na tela.
                         },
                         tocArea: {
                             ...ReactReaderStyle.tocArea,
-                            marginTop: '5vw',
+                            marginTop: '10vw',
                             height: '150vw',
                             color: '#522828',
+
                         },
                         tocButton: {
                             ...ReactReaderStyle.tocButton,
                             marginTop: '7vw',
 
 
+
                         },
                         readerArea: {
                             ...ReactReaderStyle.readerArea,
-                            marginTop: '-5vw',
+                            marginTop: '0vw',
                             backgroundColor: '#F4E2C7',
 
 

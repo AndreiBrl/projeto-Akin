@@ -298,8 +298,9 @@ body {
         color: 'white';
         font-size: 4vw;
         position: absolute;
-        bottom: -13vw;
-        left: 63vw;
+        bottom: -8vw;
+        left: 61vw;
+        z-index: -1;
     }
 }
 
