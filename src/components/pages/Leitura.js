@@ -1,8 +1,6 @@
-import React, { useState, useEffect, useRef } from 'react';
+import React, { useState, useEffect, useRef, useReducer } from 'react';
 import { ReactReader, ReactReaderStyle } from 'react-reader';
 import menuLeitura from '../img/capaEdit.png';
-import { Helmet } from 'react-helmet';
-
 
 const LeituraEPUB = () => {
     // Substitua com o caminho real para o seu arquivo EPUB
@@ -14,20 +12,24 @@ const LeituraEPUB = () => {
     const [page, setPage] = useState('');
     const [chapter, setChapter] = useState('n/a');
     const rendition = useRef();
-    const toc = useRef([]);
-    const x = 10;
-    console.log(toc.current);
 
+    const toc = useRef([]);
+   
     useEffect(() => {
         // Recupera a localização do localStorage ao montar o componente
+
         const savedLocation = localStorage.getItem('epubLocation');
         if (savedLocation) {
             setTotCurrentLocation(savedLocation);
             setFlag(false);
+
+
         }
     }, []);
 
+
     useEffect(() => {
+
         // Atualiza as informações da página e do capítulo sempre que houver uma mudança de localização
         if (rendition.current) {
             const { displayed, href } = rendition.current.location.start;
@@ -37,6 +39,7 @@ const LeituraEPUB = () => {
             setChapter(chapterItem ? chapterItem.label : 'n/a');
 
             if (chapterItem && chapterItem.label !== 'n/a' && displayed) {
+
                 setPage(<h1 className='pagina'> {chapterItem.label} - {displayed.page} de {displayed.total}</h1>);
             }
             else {
@@ -45,12 +48,16 @@ const LeituraEPUB = () => {
 
         }
 
+
     }, [TotcurrentLocation]);
+
+
+
 
 
     const handleLocation = (location) => {
         if (location !== 'epubcfi(/6/4!/4/2/1:0)') {
-            console.log(location);
+
             setFlag(false);
             setTotCurrentLocation(location.toString());
             // Salvando a localização no localStorage
@@ -61,7 +68,7 @@ const LeituraEPUB = () => {
 
     return (
         <div className="containerLeitura">
-          
+
             <div className='menuLeitura'>
 
                 <img src={menuLeitura} style={{ zIndex: changeZIndex }} />
@@ -70,164 +77,171 @@ const LeituraEPUB = () => {
             <div className='pag'>
                 {page}
 
+
             </div>
             {/* flag criada por conta de que a propriedade location da bug na primeira rendezação de tela. Segundo a própria documentação a funcao 
 location é executada inevitavelmente assim que entra na tela.
 */}
 
+            {/* 
             {flag ? (
                 <ReactReader
                     url={epubUrl}
 
 
                     locationChanged={(location) => handleLocation(location)}
-                    showToc={true}
-                />
-            ) : (
-
-                <ReactReader
-                    url={epubUrl}
-
-                    locationChanged={(location) => handleLocation(location)}
-
-                    location={TotcurrentLocation}
-                    getRendition={(rend) => (rendition.current = rend)}
-                    tocChanged={(tocData) => (toc.current = tocData)}
-                    page={page} // Adicionando o estado da página
-                    chapter={chapter} // Adicionando o estado do capítulo
-                    readerStyles={window.innerWidth >= 600 ? {
-
-                        ...ReactReaderStyle,
-                        container: {
-                            backgroundColor: '#F4E2C7',
-                            ...ReactReaderStyle.container,
-
-
-                        },
-                        tocArea: {
-                            ...ReactReaderStyle.tocArea,
-                            marginTop: '5vw',
-                            height: '150vw',
-                            color: '#522828',
-                        },
-                        tocButton: {
-                            ...ReactReaderStyle.tocButton,
-                            width: '2vw',
-                            marginTop: '4.5vw',
-
-
-                        },
-                        readerArea: {
-                            ...ReactReaderStyle.readerArea,
-                            marginTop: '0vw',
-                            backgroundColor: '#F4E2C7',
-
-
-
-                        },
-                        reader: {
-                            ...ReactReaderStyle.reader,
-                            backgroundColor: '#F4E2C7',
-
-
-
-
-
-                        },
-                        arrow: {
-                            ...ReactReaderStyle.arrow,
-                            backgroundColor: 'transparent',
-                            color: '#522828',
-
-
-
-                        },
-                        tocButtonBottom: {
-                            ...ReactReaderStyle.tocButtonBottom,
-                            backgroundColor: '#522828'
-                        },
-                        tocButtonBarTop: {
-                            ...ReactReaderStyle.tocButtonBarTop,
-                            backgroundColor: '#522828'
-                        },
-                        prev: {
-                            ...ReactReaderStyle.prev,
-                            fontSize: '10vw',
-                            top: '20vw'
-
-
-                        },
-                        next: {
-                            ...ReactReaderStyle.next,
-                            fontSize: '10vw',
-                            top: '20vw'
-
-
-                        }
-
-
-                    } : {
-                        ...ReactReaderStyle,
-                        container: {
-                            backgroundColor: '#F4E2C7',
-                            ...ReactReaderStyle.container,
-                        },
-                        tocArea: {
-                            ...ReactReaderStyle.tocArea,
-                            marginTop: '10vw',
-                            height: '150vw',
-                            color: '#522828',
-
-                        },
-                        tocButton: {
-                            ...ReactReaderStyle.tocButton,
-                            marginTop: '7vw',
-
-
-
-                        },
-                        readerArea: {
-                            ...ReactReaderStyle.readerArea,
-                            marginTop: '0vw',
-                            backgroundColor: '#F4E2C7',
-
-
-                        },
-                        reader: {
-                            ...ReactReaderStyle.reader,
-                            backgroundColor: '#F4E2C7',
-
-
-
-
-                        },
-                        arrow: {
-                            ...ReactReaderStyle.arrow,
-                            backgroundColor: '#F4E2C7',
-                            color: '#522828',
-
-
-                        },
-                        tocButtonBottom: {
-                            ...ReactReaderStyle.tocButtonBottom,
-                            backgroundColor: '#522828'
-                        },
-                        tocButtonBarTop: {
-                            ...ReactReaderStyle.tocButtonBarTop,
-                            backgroundColor: '#522828'
-                        }
-
-
-
-
-
-                    }}
 
                     showToc={true}
-
                 />
-                
-            )}
+            ) : ( */}
+
+
+            <ReactReader
+                url={epubUrl}
+
+                locationChanged={(location) => handleLocation(location)}
+
+                location={TotcurrentLocation}
+                getRendition={(rend) => (rendition.current = rend)}
+                tocChanged={(tocData) => (toc.current = tocData)}
+                page={page} // Adicionando o estado da página
+                chapter={chapter} // Adicionando o estado do capítulo
+                readerStyles={window.innerWidth >= 600 ? {
+
+                    ...ReactReaderStyle,
+                    container: {
+                        backgroundColor: '#F4E2C7',
+                        ...ReactReaderStyle.container,
+
+
+                    },
+                    tocArea: {
+                        ...ReactReaderStyle.tocArea,
+                        marginTop: '5vw',
+                        height: '150vw',
+                        color: '#522828',
+                    },
+                    tocButton: {
+                        ...ReactReaderStyle.tocButton,
+                        width: '2vw',
+                        marginTop: '4.5vw',
+
+
+                    },
+                    readerArea: {
+                        ...ReactReaderStyle.readerArea,
+                        marginTop: '0vw',
+                        backgroundColor: '#F4E2C7',
+
+
+
+                    },
+                    reader: {
+                        ...ReactReaderStyle.reader,
+                        backgroundColor: '#F4E2C7',
+
+
+
+
+
+                    },
+                    arrow: {
+                        ...ReactReaderStyle.arrow,
+                        backgroundColor: 'transparent',
+                        color: '#522828',
+
+
+
+                    },
+                    tocButtonBottom: {
+                        ...ReactReaderStyle.tocButtonBottom,
+                        backgroundColor: '#522828'
+                    },
+                    tocButtonBarTop: {
+                        ...ReactReaderStyle.tocButtonBarTop,
+                        backgroundColor: '#522828'
+                    },
+                    prev: {
+                        ...ReactReaderStyle.prev,
+                        fontSize: '10vw',
+                        top: '20vw'
+
+
+                    },
+                    next: {
+                        ...ReactReaderStyle.next,
+                        fontSize: '10vw',
+                        top: '20vw'
+
+
+                    }
+
+
+                } : {
+                    ...ReactReaderStyle,
+                    container: {
+                        backgroundColor: '#F4E2C7',
+                        ...ReactReaderStyle.container,
+                    },
+                    tocArea: {
+                        ...ReactReaderStyle.tocArea,
+                        marginTop: '10vw',
+                        height: '150vw',
+                        color: '#522828',
+
+                    },
+                    tocButton: {
+                        ...ReactReaderStyle.tocButton,
+                        marginTop: '7vw',
+
+
+
+                    },
+                    readerArea: {
+                        ...ReactReaderStyle.readerArea,
+                        marginTop: '0vw',
+                        backgroundColor: '#F4E2C7',
+
+
+                    },
+                    reader: {
+                        ...ReactReaderStyle.reader,
+                        backgroundColor: '#F4E2C7',
+
+
+
+
+                    },
+                    arrow: {
+                        ...ReactReaderStyle.arrow,
+                        backgroundColor: '#F4E2C7',
+                        color: '#522828',
+
+
+                    },
+                    tocButtonBottom: {
+                        ...ReactReaderStyle.tocButtonBottom,
+                        backgroundColor: '#522828'
+                    },
+                    tocButtonBarTop: {
+                        ...ReactReaderStyle.tocButtonBarTop,
+                        backgroundColor: '#522828'
+                    }
+
+
+
+
+
+                }}
+
+                showToc={true}
+
+            />
+
+
+            {/* )} */}
+           
+
         </div>
     );
 };
