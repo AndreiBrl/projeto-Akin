@@ -9,12 +9,14 @@ const LeituraEPUB = () => {
     const [changeZIndex, setChangeZindex] = useState(2)
     const [flag, setFlag] = useState(true);
 
-    const [page, setPage] = useState('');
     const [chapter, setChapter] = useState('n/a');
     const rendition = useRef();
-
+    const pageLocalStorage = localStorage.getItem('page');
+    const [page, setPage] = useState(pageLocalStorage);
+    localStorage.setItem('page', page);
+    
     const toc = useRef([]);
-   
+
     useEffect(() => {
         // Recupera a localização do localStorage ao montar o componente
 
@@ -22,6 +24,7 @@ const LeituraEPUB = () => {
         if (savedLocation) {
             setTotCurrentLocation(savedLocation);
             setFlag(false);
+
 
 
         }
@@ -40,7 +43,8 @@ const LeituraEPUB = () => {
 
             if (chapterItem && chapterItem.label !== 'n/a' && displayed) {
 
-                setPage(<h1 className='pagina'> {chapterItem.label} - {displayed.page} de {displayed.total}</h1>);
+                setPage(`${chapterItem.label} - ${displayed.page} de ${displayed.total}`);
+
             }
             else {
                 setPage('');
@@ -75,7 +79,7 @@ const LeituraEPUB = () => {
             </div>
 
             <div className='pag'>
-                {page}
+                <h1 className='pagina'>  {page}</h1>
 
 
             </div>
@@ -93,6 +97,8 @@ location é executada inevitavelmente assim que entra na tela.
 
                     showToc={true}
                 />
+                nivia
+
             ) : ( */}
 
 
@@ -240,7 +246,7 @@ location é executada inevitavelmente assim que entra na tela.
 
 
             {/* )} */}
-           
+
 
         </div>
     );
