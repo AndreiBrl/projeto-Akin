@@ -3,7 +3,7 @@ import { ReactReader, ReactReaderStyle } from 'react-reader';
 import menuLeitura from '../img/capaEdit.png';
 import map from '../img/iconeMap.png'
 import { useNavigate } from "react-router-dom";
-
+import setaVolta from '../img/setaVolta.png'
 const LeituraEPUB = () => {
     // Substitua com o caminho real para o seu arquivo EPUB
     const epubUrl = 'https://magical-marzipan-1029e1.netlify.app/teste.epub';
@@ -87,7 +87,9 @@ const LeituraEPUB = () => {
                 <img src={menuLeitura} style={{ zIndex: changeZIndex }} />
             </div>
         <div className='map'>
-        <img src={map} onClick={()=>navega('/Mapa')}/>
+
+        <img className='volta'src={setaVolta} onClick={()=>navega('/')}/>
+        <img className='mapOri'src={map} onClick={()=>navega('/Mapa')}/>
         </div>
             <div className='pag'>
                 <h1 className='pagina'>  {page}</h1>

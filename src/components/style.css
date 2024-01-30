@@ -276,20 +276,35 @@ body {
 }
 
 .map {
-
+    padding-left: 11vw;
     width: 100%;
     display: flex;
-    justify-content: center;
+    align-items: center;
+    
 }
 
-.map img {
+
+
+.mapOri{
     width: 10vw;
+    margin-left: 8vw;
     transition: all 0.1s linear;
+    cursor: pointer;
+    
 }
-
-.map img:hover {
+.volta{
+    cursor: pointer;
+    filter: brightness(0);
+    transform: rotateY(180deg);
+    width: 5vw;
+    height: 5vw;
+    transition: all 0.1s linear;
+    
+}
+.mapOri:hover,.volta.volta:hover{
     scale: 1.1;
 }
+
 
 .pag {
     position: relative;
@@ -334,20 +349,27 @@ body {
     }
 
     .map {
-
-        width: 100%;
+        align-items: center;
+        width: 100vw;
         display: flex;
-        justify-content: center;
+        padding-left: 2vw;
+       
     }
-
-    .map img {
+    .mapOri{
         width: 30vw;
+        margin-left: 20vw;
         transition: all 0.1s linear;
     }
-
-    .map img:hover {
-        scale: 1.1;
+    .volta{
+        filter: brightness(0);
+        transform: rotateY(180deg);
+        width: 15vw;
+        height: 15vw;
+        
     }
+
+  
+   
 
     .pag {
         position: relative;
