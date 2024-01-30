@@ -6,6 +6,7 @@ import Home from './components/pages/Home';
 import Leitura from './components/pages/Leitura';
 import Sobre from './components/pages/Sobre';
 import { Helmet } from 'react-helmet';
+import Mapa from './components/pages/Mapa';
 function App() {
 
   return (
@@ -20,6 +21,7 @@ function App() {
             <Route path="/" element={<Home />} />
             <Route path="leitura" element={<Leitura />} />
             <Route path="sobre" element={<Sobre />} />
+            <Route path="mapa" element={<Mapa />} />
           </Route>
         </Routes>
       </BrowserRouter>

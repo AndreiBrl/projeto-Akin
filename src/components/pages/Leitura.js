@@ -1,6 +1,8 @@
 import React, { useState, useEffect, useRef, useReducer } from 'react';
 import { ReactReader, ReactReaderStyle } from 'react-reader';
 import menuLeitura from '../img/capaEdit.png';
+import map from '../img/iconeMap.png'
+import { useNavigate } from "react-router-dom";
 
 const LeituraEPUB = () => {
     // Substitua com o caminho real para o seu arquivo EPUB
@@ -16,6 +18,13 @@ const LeituraEPUB = () => {
     localStorage.setItem('page', page);
     
     const toc = useRef([]);
+
+    const navigation = useNavigate();
+    const navega = (rota) => {
+        navigation(rota)
+
+    }
+
 
     useEffect(() => {
         // Recupera a localização do localStorage ao montar o componente
@@ -77,7 +86,9 @@ const LeituraEPUB = () => {
 
                 <img src={menuLeitura} style={{ zIndex: changeZIndex }} />
             </div>
-
+        <div className='map'>
+        <img src={map} onClick={()=>navega('/Mapa')}/>
+        </div>
             <div className='pag'>
                 <h1 className='pagina'>  {page}</h1>
 

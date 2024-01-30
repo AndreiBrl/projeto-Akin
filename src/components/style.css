@@ -230,6 +230,7 @@ body {
         top: 32vw;
         left: 52vw
     }
+
     .emBreve {
         position: absolute;
         bottom: 17vw;
@@ -274,6 +275,20 @@ body {
     border-radius: 5px;
 }
 
+.map {
+
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.map img {
+    width: 10vw;
+    transition: all 0.1s linear;
+}
+.map img:hover {
+    scale: 1.1;
+}
 .pag {
     position: relative;
 
@@ -312,8 +327,24 @@ body {
 
     .menuLeitura img {
         width: 100vw;
+        
+
     }
 
+    .map {
+
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+    
+    .map img {
+        width: 30vw;
+        transition: all 0.1s linear;
+    }
+    .map img:hover {
+        scale: 1.1;
+    }
     .pag {
         position: relative;
 
@@ -526,4 +557,36 @@ body {
         font-family: 'Times New Roman', Times, serif;
         padding-left: 3vw;
     }
+}
+
+/* Mapa desktop */
+.pagMapa {
+    width: 100vw;
+    padding-top: 3vw;
+    display: flex;
+    justify-content: center;
+    
+}
+
+.pagMapa img {
+    width: 60vw;
+    border-radius: 0.5vw;
+}
+/* Mapa celular */
+
+@media only screen and (max-width: 600px) {
+    .pagMapa {
+        width: 100vw;
+    
+        padding-top: 50vw;
+        display: flex;
+        justify-content: center;
+      
+    }
+    
+    .pagMapa img {
+       width: 90vw;
+        border-radius: 0.5vw;
+    }
+
 }

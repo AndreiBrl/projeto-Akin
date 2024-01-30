@@ -21,6 +21,7 @@ const Home = () => {
                 <img src={titulo} />
 
             </div>
+
             <div className="menu">
                 
                     
