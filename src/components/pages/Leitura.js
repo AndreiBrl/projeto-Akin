@@ -92,7 +92,8 @@ const LeituraEPUB = () => {
         <img className='mapOri'src={map} onClick={()=>navega('/Mapa')}/>
         </div>
             <div className='pag'>
-                <h1 className='pagina'>  {page}</h1>
+                
+            <h1 className='pagina'>{page == 'null' ? ' ' : page}</h1>
 
 
             </div>
@@ -100,7 +101,7 @@ const LeituraEPUB = () => {
 location é executada inevitavelmente assim que entra na tela.
 */}
 
-            {/* 
+            
             {flag ? (
                 <ReactReader
                     url={epubUrl}
@@ -110,9 +111,10 @@ location é executada inevitavelmente assim que entra na tela.
 
                     showToc={true}
                 />
-                nivia
+                // nivia
 
-            ) : ( */}
+
+            ) : (
 
 
             <ReactReader
@@ -258,7 +260,7 @@ location é executada inevitavelmente assim que entra na tela.
             />
 
 
-            {/* )} */}
+             )} 
 
 
         </div>
