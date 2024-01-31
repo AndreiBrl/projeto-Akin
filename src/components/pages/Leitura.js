@@ -50,7 +50,7 @@ const LeituraEPUB = () => {
             const chapterItem = toc.current?.find(item => item.href === href);
             setChapter(chapterItem ? chapterItem.label : 'n/a');
 
-            console.log('ss'+chapterItem);
+            console.log(rendition+'ss'+chapterItem);
 
             if (chapterItem && chapterItem.label !== 'n/a' && displayed) {
 
@@ -116,6 +116,7 @@ location é executada inevitavelmente assim que entra na tela.
                     chapter={chapter} // Adicionando o estado do capítulo
                     showToc={true}
                     tocChanged={(tocData) => (toc.current = tocData)}
+                    
                 />
                 // nivia
 
