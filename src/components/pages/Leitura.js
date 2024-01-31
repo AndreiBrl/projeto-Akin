@@ -46,16 +46,18 @@ const LeituraEPUB = () => {
         if (rendition.current) {
             const { displayed, href } = rendition.current.location.start;
             // Recupera o capítulo correspondente da tabela de conteúdos (TOC)
-
+            
             const chapterItem = toc.current?.find(item => item.href === href);
             setChapter(chapterItem ? chapterItem.label : 'n/a');
+
+            console.log('ss'+chapterItem);
 
             if (chapterItem && chapterItem.label !== 'n/a' && displayed) {
 
                 setPage(`${chapterItem.label} - ${displayed.page} de ${displayed.total}`);
-
             }
             else {
+
                 setPage('');
             }
 
@@ -92,8 +94,9 @@ const LeituraEPUB = () => {
         <img className='mapOri'src={map} onClick={()=>navega('/Mapa')}/>
         </div>
             <div className='pag'>
-                
+
             <h1 className='pagina'>{page == 'null' ? ' ' : page}</h1>
+            {/* <h1 className='pagina'>{page}</h1> */}
 
 
             </div>
@@ -108,8 +111,11 @@ location é executada inevitavelmente assim que entra na tela.
 
 
                     locationChanged={(location) => handleLocation(location)}
-
+                    getRendition={(rend) => (rendition.current = rend)}
+                    page={page} // Adicionando o estado da página
+                    chapter={chapter} // Adicionando o estado do capítulo
                     showToc={true}
+                    tocChanged={(tocData) => (toc.current = tocData)}
                 />
                 // nivia
 
