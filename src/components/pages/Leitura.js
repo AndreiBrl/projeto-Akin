@@ -6,7 +6,7 @@ import { useNavigate } from "react-router-dom";
 import setaVolta from '../img/setaVolta.png'
 const LeituraEPUB = () => {
     // Substitua com o caminho real para o seu arquivo EPUB
-    const epubUrl = 'https://magical-marzipan-1029e1.netlify.app/teste.epub';
+    const epubUrl = 'https://magical-marzipan-1029e1.netlify.app/Original-Andrei-Barbuto.epub';
     const [TotcurrentLocation, setTotCurrentLocation] = useState("");
     const [changeZIndex, setChangeZindex] = useState(2)
     const [flag, setFlag] = useState(true);
