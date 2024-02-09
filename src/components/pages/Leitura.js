@@ -4,6 +4,8 @@ import menuLeitura from '../img/capaEdit.png';
 import map from '../img/iconeMap.png'
 import { useNavigate } from "react-router-dom";
 import setaVolta from '../img/setaVolta.png'
+
+
 const LeituraEPUB = () => {
     // Substitua com o caminho real para o seu arquivo EPUB
     const epubUrl = 'https://magical-marzipan-1029e1.netlify.app/Original-Andrei-Barbuto.epub';
@@ -25,7 +27,20 @@ const LeituraEPUB = () => {
 
     }
 
-
+    useEffect(() => {
+        if ('serviceWorker' in navigator) {
+          window.addEventListener('load', () => {
+            navigator.serviceWorker.register('/service-worker.js')
+              .then(registration => {
+                console.log('Service Worker registrado com sucesso!', registration);
+              })
+              .catch(error => {
+                console.error('Falha ao registrar o Service Worker:', error);
+              });
+          });
+        }
+      }, []);
+      
     useEffect(() => {
         // Recupera a localização do localStorage ao montar o componente
 
@@ -106,6 +121,7 @@ location é executada inevitavelmente assim que entra na tela.
 
             
             {flag ? (
+               
                 <ReactReader
                     url={epubUrl}
 
@@ -118,6 +134,7 @@ location é executada inevitavelmente assim que entra na tela.
                     tocChanged={(tocData) => (toc.current = tocData)}
                     
                 />
+            
                 // nivia
 
 
@@ -264,7 +281,7 @@ location é executada inevitavelmente assim que entra na tela.
 
                 showToc={true}
 
-            />
+            /> 
 
 
              )} 
