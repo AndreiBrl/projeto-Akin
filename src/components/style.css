@@ -197,7 +197,7 @@ body {
     }
 
     
-    .homenzin,
+    
     .saco {
         display: none;
     }
@@ -206,13 +206,24 @@ body {
         left: 21.5vw;
         width: 29vw !important;
         animation: cresceLivro 0.5s linear infinite alternate ;
-        filter: brightness(1);
+        filter: grayscale(0);
     }
-   
+    .homenzin{
+        filter: grayscale(0);
+        top: 1vw;
+        left: 42vw;
+        width:22vw !important;
+        animation: cresceLivro 0.5s linear infinite alternate ;
+        
+    }
 
     @keyframes cresceLivro {
         0% { transform: scale(1); } /* Tamanho original */
         100% { transform: scale(1.05); } /* Tamanho aumentado */
+      }
+      @keyframes filterH {
+        0% { filter: grayscale(0);} /* Tamanho original */
+        100% { filter: grayscale(1); } /* Tamanho aumentado */
       }
     .about {
         width: 20vw;
