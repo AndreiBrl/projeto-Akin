@@ -7,6 +7,7 @@ import Leitura from './components/pages/Leitura';
 import Sobre from './components/pages/Sobre';
 import { Helmet } from 'react-helmet';
 import Mapa from './components/pages/Mapa';
+import Apoie from './components/pages/Apoie';
 function App() {
 
   return (
@@ -22,6 +23,7 @@ function App() {
             <Route path="leitura" element={<Leitura />} />
             <Route path="sobre" element={<Sobre />} />
             <Route path="mapa" element={<Mapa />} />
+            <Route path="apoie" element={<Apoie />} />
           </Route>
         </Routes>
       </BrowserRouter>

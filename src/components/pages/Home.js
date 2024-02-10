@@ -31,12 +31,14 @@ const Home = () => {
                         <img className="m-mobile"src={menuMobile} />
                         <img className="livroAkin"src={livro} onClick={() => { navega('/Leitura') }}/>
                         <img className="homenzin"src={homenzin} onClick={() => { navega('/Sobre') }}/>
-                        <img className="saco"src={saco} />
-                        <h1 className="emBreve">EM BREVE</h1>
-                
-                <div onClick={() => { navega('/Sobre') }} className="about"></div>
-                <div onClick={() => { navega('/Leitura') }} className="book"></div>
+                        <img className="saco"src={saco}onClick={() => { navega('/Apoie') }}/>
+                        {/* <h1 className="emBreve">EM BREVE</h1> */}
+
+                {/* div de clica em cima da imagem */}
+                {/* <div onClick={() => { navega('/Sobre') }} className="about"></div>
+                <div onClick={() => { navega('/Leitura') }} className="book"></div> 
                 <div className="catarse"></div>
+                */}
             </div>
         </div>
     )
