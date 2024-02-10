@@ -5,6 +5,7 @@ import titulo from "../img/tituloHome.png"
 import livro from "../img/livroAkin.png"
 import homenzin from "../img/homenzin.png"
 import saco from "../img/saco.png"
+import setasGif from "../img/setasGif.gif"
 const Home = () => {
 
     const navigation = useNavigate();
@@ -30,6 +31,7 @@ const Home = () => {
                         <img className="livroAkin"src={livro} onClick={() => { navega('/Leitura') }}/>
                         <img className="homenzin"src={homenzin} onClick={() => { navega('/Sobre') }}/>
                         <img className="saco"src={saco} />
+                        <img className="setasGif" src={setasGif} />
                         <h1 className="emBreve">EM BREVE</h1>
                 
                 <div onClick={() => { navega('/Sobre') }} className="about"></div>

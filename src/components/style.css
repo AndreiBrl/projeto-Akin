@@ -197,6 +197,12 @@ body {
     .saco {
         display: none;
     }
+    .setasGif{
+        position: absolute;
+        top: 33vw;
+        left: 7vw;
+        width: 15vw !important;
+    }
 
     .about {
         width: 20vw;
