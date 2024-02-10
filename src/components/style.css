@@ -591,7 +591,7 @@ body {
         margin-right: 0vw;
         position: relative;
         background-color: #F4E2C7;
-        height: 320vw;
+        height: 230vw;
 
     }
 
@@ -723,10 +723,10 @@ body {
 
 
 .apoie {
-    margin-top: 0vw;
-    width: 18vw;
+    margin-bottom: 2vw;
+    width: 28vw;
     transition: 0.1s all linear;
-    padding-left: 7vw;
+    padding-left: 16vw;
 }
 
 
@@ -744,13 +744,13 @@ body {
     top: -1.2vw;
 }
 
-.textoSobre {
+.textoApoie {
     margin-left: 10vw;
     margin-right: 10vw;
     display: flex;
 }
 
-.textoSobre-2 {
+.textoApoie-2 {
     border-left: 3px solid rgb(88, 29, 8);
     margin-top: 15vw;
     text-align: justify;
@@ -823,7 +823,7 @@ body {
         margin-right: 0vw;
         position: relative;
         background-color: #F4E2C7;
-        height: 320vw;
+        height: 230vw;
 
     }
 
@@ -833,13 +833,13 @@ body {
         top: -2vw;
     }
 
-    .textoSobre {
+    .textoApoie {
         margin-left: 12vw;
         margin-right: 12vw;
         display: flex;
     }
 
-    .textoSobre-2 {
+    .textoApoie-2 {
         border-left: 2px solid rgb(88, 29, 8);
         margin-top: 25vw;
         text-align: justify;
