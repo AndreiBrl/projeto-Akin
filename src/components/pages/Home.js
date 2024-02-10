@@ -5,7 +5,6 @@ import titulo from "../img/tituloHome.png"
 import livro from "../img/livroAkin.png"
 import homenzin from "../img/homenzin.png"
 import saco from "../img/saco.png"
-import setasGif from "../img/setasGif.gif"
 const Home = () => {
 
     const navigation = useNavigate();
