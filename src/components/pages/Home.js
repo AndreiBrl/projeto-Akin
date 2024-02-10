@@ -25,13 +25,13 @@ const Home = () => {
 
             <div className="menu">
                 
+
                     
                         <img className="m-desk" src={menuDesk} />
                         <img className="m-mobile"src={menuMobile} />
                         <img className="livroAkin"src={livro} onClick={() => { navega('/Leitura') }}/>
                         <img className="homenzin"src={homenzin} onClick={() => { navega('/Sobre') }}/>
                         <img className="saco"src={saco} />
-                        <img className="setasGif" src={setasGif} />
                         <h1 className="emBreve">EM BREVE</h1>
                 
                 <div onClick={() => { navega('/Sobre') }} className="about"></div>
