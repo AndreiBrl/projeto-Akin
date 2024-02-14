@@ -5,6 +5,7 @@ import titulo from "../img/tituloHome.png"
 import livro from "../img/livroAkin.png"
 import homenzin from "../img/homenzin.png"
 import saco from "../img/saco.png"
+import palavraMenu from "../img/palavraMenu.png"
 const Home = () => {
 
     const navigation = useNavigate();
@@ -27,6 +28,7 @@ const Home = () => {
 
                     
                         <img className="m-desk" src={menuDesk} />
+                        <img className="palavraMenu" src={palavraMenu} />
                         <img className="m-mobile"src={menuMobile} />
                         <img className="livroAkin"src={livro} onClick={() => { navega('/Leitura') }}/>
                         <img className="homenzin"src={homenzin} onClick={() => { navega('/Sobre') }}/>
