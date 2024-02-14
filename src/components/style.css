@@ -419,8 +419,9 @@ body {
         font-size: 4vw;
         position: absolute;
         bottom: -8vw;
-        left: 65vw;
+        left: 34vw;
         z-index: -1;
+        width: 70vw;
     }
 }
 

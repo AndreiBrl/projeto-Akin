@@ -4,10 +4,15 @@ import perfil from '../img/perfil.png'
 import insta from '../img/insta.png'
 import gmail from '../img/gmail.png'
 import barraSobre from '../img/barraSobre.png'
-
+import { useNavigate } from "react-router-dom";
+import setaVolta from "../img/setaVolta.png"
 const Sobre = () => {
 
+    const navigation = useNavigate();
+    const navega = (rota) => {
+        navigation(rota)
 
+    }
     return (
         <>
             <div className="containerSobre">
@@ -26,7 +31,7 @@ const Sobre = () => {
                 </div>
             </div>
             <div className='containerSobreTexto'>
-
+            <img style={{position:"absolute",top:'5vw',zIndex:5}}className='volta'src={setaVolta} onClick={()=>navega('/')}/>
                 <img className='barraSobre' src={barraSobre} />
                 <div className='textoSobre'>
                     <div className='textoSobre-2'>
